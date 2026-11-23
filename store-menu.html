@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Menu | ABES.BITE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="store-menu-page">
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ABES<span>.BITE</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">My Cart</a>
+            <a href="my-orders.html">My Orders</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Store Information -->
+    <main class="dashboard-content">
+
+        <section class="menu-store-header">
+
+            <p class="owner-label">CAMPUS FOOD OUTLET</p>
+
+            <h1 id="storeName">Loading store...</h1>
+
+            <p id="storeLocation"></p>
+
+            <p id="storeDescription"></p>
+
+        </section>
+
+
+        <!-- Menu Heading -->
+        <section class="food-menu-section">
+
+            <div class="menu-heading">
+                <div>
+                    <h2>Explore Our Menu</h2>
+                    <p>Find your favourite food and order it online.</p>
+                </div>
+            </div>
+
+
+            <!-- Search and Filter -->
+            <div class="menu-controls">
+
+                <input
+                    type="search"
+                    id="menuSearch"
+                    placeholder="Search for food..."
+                    aria-label="Search food items"
+                >
+
+                <select id="categoryFilter" aria-label="Filter by category">
+                    <option value="all">All Categories</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="beverages">Beverages</option>
+                    <option value="meals">Meals</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </div>
+
+
+            <!-- Food Items -->
+            <div id="menuItems" class="menu-items-grid">
+
+                <p>Loading food items...</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script type="module" src="store-menu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | ABES.BITE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ABES<span>.BITE</span>
+        </a>
+
+        <a href="index.html" class="login-btn">
+            Back to Home
+        </a>
+
+    </header>
+
+
+    <!-- REGISTRATION SECTION -->
+
+    <main class="auth-container">
+
+        <div class="auth-card register-card">
+
+            <div class="auth-heading">
+
+                <div class="register-icon">🎓</div>
+
+                <h1>Create Your Account</h1>
+
+                <p>
+                    Join ABES.BITE and enjoy convenient
+                    campus food ordering.
+                </p>
+
+            </div>
+
+
+            <!-- REGISTRATION TABS -->
+
+            <div class="account-tabs">
+
+                <button
+                    type="button"
+                    class="account-tab active"
+                    id="phone-tab"
+                    onclick="showRegister('phone')">
+
+                    Phone Number
+
+                </button>
+
+                <button
+                    type="button"
+                    class="account-tab"
+                    id="email-tab"
+                    onclick="showRegister('email')">
+
+                    Email
+
+                </button>
+
+            </div>
+
+
+            <!-- PHONE REGISTRATION -->
+
+            <form id="phone-form">
+                <div id="recaptcha-container"></div>
+
+                <label for="phone-name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="phone-name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="phone-number">Mobile Number</label>
+
+                <div class="phone-input">
+
+                    <span>+91</span>
+
+                    <input
+                        type="tel"
+                        id="phone-number"
+                        placeholder="10-digit mobile number"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" class="auth-submit">
+                    Create Account with OTP
+                </button>
+
+            </form>
+
+
+            <!-- EMAIL REGISTRATION -->
+
+            <form id="email-form" style="display:none;">
+
+                <label for="email-name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="email-name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="student-email">Personal Email</label>
+
+                <input
+                    type="email"
+                    id="student-email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <label for="student-password">Create Password</label>
+
+                <input
+                    type="password"
+                    id="student-password"
+                    placeholder="Create a password"
+                    minlength="8"
+                    required
+                >
+
+                <label for="confirm-password">Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="Enter password again"
+                    minlength="8"
+                    required
+                >
+
+                <button type="submit" class="auth-submit">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <!-- GOOGLE REGISTRATION -->
+
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+
+            <button
+                type="button"
+                class="google-btn"
+                id="google-register">
+
+                <svg width="20" height="20" viewBox="0 0 48 48"
+                     aria-hidden="true">
+                    <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                    <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.28 5.48-4.84 7.18l7.73 6C44.34 38.03 46.98 31.89 46.98 24.55z"/>
+                    <path fill="#FBBC05"
+                        d="M10.53 28.59A14.41 14.41 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.87.93 7.51 2.56 10.78l7.97-6.19z"/>
+                    <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.9-5.8l-7.73-6c-2.15 1.45-4.92 2.3-8.17 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                </svg>
+
+                Sign Up with Google
+
+            </button>
+
+
+            <p class="auth-switch">
+
+                Already have an account?
+
+                <a href="student-login.html">
+                    Login
+                </a>
+
+            </p>
+
+            <p id="register-message"></p>
+
+        </div>
+
+    </main>
+
+
+    <script type="module" src="student-register.js"></script>
+
+</body>
+</html>

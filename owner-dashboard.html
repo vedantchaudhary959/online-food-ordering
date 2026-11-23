@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Owner Dashboard | ABES.BITE</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .owner-section {
+            background: #fff;
+            padding: 24px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        .owner-section h2 {
+            color: #751D2A;
+            margin-bottom: 18px;
+        }
+
+        .owner-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .owner-form input,
+        .owner-form select,
+        .owner-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font: inherit;
+        }
+
+        .owner-form textarea {
+            grid-column: 1 / -1;
+            min-height: 75px;
+        }
+
+        .owner-btn {
+            background: #751D2A;
+            color: white;
+            padding: 11px 20px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .owner-btn:hover {
+            background: #4F101B;
+        }
+
+        .owner-list {
+            margin-top: 22px;
+        }
+
+        .owner-item {
+            padding: 15px;
+            margin: 12px 0;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .owner-item button {
+            margin: 8px 6px 0 0;
+        }
+
+        .section-message {
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="admin-navbar">
+        <h2>ABES.BITE | Store Owner</h2>
+        <button id="ownerLogout" class="logout-btn">Logout</button>
+    </header>
+
+    <main class="dashboard-content">
+
+        <h1>Store Owner Dashboard</h1>
+        <p>Manage your campus store, food menu and orders.</p>
+
+        <!-- Dashboard Statistics -->
+        <section class="dashboard-stats">
+
+            <div class="stat-card">
+                <h3>Store Name</h3>
+                <p id="storeName">Loading...</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Application Status</h3>
+                <p id="storeStatus">Loading...</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Food Items</h3>
+                <p id="totalItems">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Orders</h3>
+                <p id="totalOrders">0</p>
+            </div>
+
+        </section>
+
+        <!-- Store Information -->
+        <section class="owner-section">
+            <h2>Store Information</h2>
+            <div id="storeInformation">
+                Loading store information...
+            </div>
+        </section>
+
+        <!-- Food Menu Management -->
+        <section class="owner-section">
+
+            <h2>Manage Food Menu</h2>
+            <p>Add and manage the food items available in your store.</p>
+
+            <form id="addFoodForm" class="owner-form">
+
+                <input
+                    type="text"
+                    id="foodName"
+                    placeholder="Food item name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="foodPrice"
+                    placeholder="Price in ₹"
+                    min="1"
+                    step="0.01"
+                    required
+                >
+
+                <select id="foodCategory" required>
+                    <option value="">Select Category</option>
+                    <option value="Snacks">Snacks</option>
+                    <option value="Meals">Meals</option>
+                    <option value="Beverages">Beverages</option>
+                    <option value="Fast Food">Fast Food</option>
+                    <option value="Desserts">Desserts</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input
+                    type="url"
+                    id="foodImage"
+                    placeholder="Food image URL (optional)"
+                >
+
+                <textarea
+                    id="foodDescription"
+                    placeholder="Food description"
+                ></textarea>
+
+                <button type="submit" class="owner-btn">
+                    Add Food Item
+                </button>
+
+            </form>
+
+            <p id="foodMessage" class="section-message"></p>
+
+            <div class="owner-list">
+                <h3>Your Food Items</h3>
+                <div id="foodItemsList">
+                    Your food items will appear here.
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Order Management -->
+        <section class="owner-section">
+
+            <h2>Manage Orders</h2>
+            <p>View customer orders and update their preparation status.</p>
+
+            <div class="owner-list" id="ownerOrdersList">
+                Your incoming orders will appear here.
+            </div>
+
+            <p id="orderMessage" class="section-message"></p>
+
+        </section>
+
+        <p id="ownerDashboardMessage"></p>
+
+    </main>
+
+    <script type="module" src="owner-dashboard.js"></script>
+
+</body>
+</html>

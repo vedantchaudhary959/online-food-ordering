@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | ABES.BITE</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .orders-container {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        .order-card {
+            background: white;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            border-left: 5px solid #751D2A;
+        }
+
+        .order-card h3 {
+            color: #751D2A;
+        }
+
+        .order-status {
+            display: inline-block;
+            padding: 7px 12px;
+            background: #F8E8E6;
+            color: #751D2A;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .order-card p {
+            margin: 9px 0;
+        }
+
+        .empty-orders {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+.order-notification {
+    background: #FFF9EC;
+    color: #4F101B;
+    border-left: 5px solid #E5B817;
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    animation: notificationSlide 0.4s ease;
+}
+
+@keyframes notificationSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ORDER PROGRESS TRACKER */
+
+.order-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 25px 0;
+    gap: 5px;
+}
+
+.progress-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+    color: #888;
+}
+
+.progress-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #ddd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: bold;
+}
+
+.progress-step.completed .progress-circle {
+    background: #751D2A;
+}
+
+.progress-step.active .progress-circle {
+    background: #E5B817;
+    color: #4F101B;
+}
+
+.progress-step.completed,
+.progress-step.active {
+    color: #751D2A;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .progress-step {
+        font-size: 10px;
+    }
+
+    .progress-circle {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <header class="admin-navbar">
+        <h2>ABES.BITE | My Orders</h2>
+        <button class="logout-btn" onclick="window.location.href='index.html'">
+            Home
+        </button>
+    </header>
+
+    <main class="orders-container">
+
+        <h1>My Orders</h1>
+        <p>Track your food orders and check their preparation status.</p>
+
+      
+<div id="notification-area"></div>
+
+<div id="orders-message">
+    Loading your orders...
+</div>
+
+<div id="orders-list"></div>
+
+    </main>
+
+    <script type="module" src="my-orders.js"></script>
+
+</body>
+</html>

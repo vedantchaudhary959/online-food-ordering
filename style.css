@@ -1,0 +1,221 @@
+
+/* =========================================
+   ABES.BITE - PROFESSIONAL FOOD MENU
+========================================= */
+
+.store-menu-page {
+    background: #FFF9EC;
+    min-height: 100vh;
+}
+
+/* Store Header */
+
+.menu-store-header {
+    padding: 55px 8% 40px;
+    background: linear-gradient(120deg, #4F101B, #751D2A);
+    color: white;
+}
+
+.menu-store-header .owner-label {
+    color: #E5B817;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.menu-store-header h1 {
+    font-size: clamp(30px, 4vw, 44px);
+    margin: 12px 0;
+    color: white;
+}
+
+.menu-store-header p {
+    color: #F5E8DF;
+    margin-top: 7px;
+}
+
+/* Menu Section */
+
+.food-menu-section {
+    padding: 55px 8%;
+}
+
+.menu-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.menu-heading h2 {
+    font-size: 30px;
+    color: #4F101B;
+}
+
+.menu-heading p {
+    color: #82736B;
+    margin-top: 5px;
+}
+
+/* Search and Category Filter */
+
+.menu-controls {
+    display: grid;
+    grid-template-columns: 1fr 230px;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.menu-controls input,
+.menu-controls select {
+    width: 100%;
+    padding: 15px 17px;
+    border: 1px solid #E5D8C9;
+    border-radius: 10px;
+    background: white;
+    color: #292124;
+    font-size: 14px;
+    outline: none;
+}
+
+.menu-controls input:focus,
+.menu-controls select:focus {
+    border-color: #751D2A;
+    box-shadow: 0 0 0 3px rgba(117, 29, 42, 0.09);
+}
+
+/* Food Cards Grid */
+
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual Food Card */
+
+.food-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    background: white;
+    border: 1px solid #F0E4D5;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(79, 16, 27, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(79, 16, 27, 0.10);
+    border-color: #E5B817;
+}
+
+/* Food Category */
+
+.food-category {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #F8E8E6;
+    color: #751D2A;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* Food Details */
+
+.food-card h3 {
+    color: #4F101B;
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.food-card p {
+    color: #82736B;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* Price */
+
+.food-price {
+    display: block;
+    color: #751D2A;
+    font-size: 21px;
+    font-weight: 800;
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+/* Add to Cart Button */
+
+.food-card .primary-btn {
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.food-card .primary-btn:hover {
+    background: #4F101B;
+    transform: translateY(-2px);
+}
+
+/* Empty Menu Message */
+
+.menu-items-grid > p {
+    grid-column: 1 / -1;
+    padding: 35px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    color: #82736B;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 900px) {
+    .menu-items-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .food-menu-section {
+        padding: 45px 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-store-header {
+        padding: 40px 6%;
+    }
+
+    .food-menu-section {
+        padding: 35px 5%;
+    }
+
+    .menu-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-items-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .menu-heading h2 {
+        font-size: 25px;
+    }
+
+    .food-card {
+        padding: 22px;
+    }
+}
+

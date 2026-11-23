@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register Your Store | ABES.BITE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ABES<span>.BITE</span>
+        </a>
+
+        <a href="index.html" class="login-btn">
+            Back to Home
+        </a>
+
+    </header>
+
+
+    <!-- STORE REGISTRATION -->
+
+    <main class="auth-container">
+
+        <div class="auth-card store-register-card">
+
+            <div class="auth-heading">
+
+                <div class="register-icon">🏪</div>
+
+                <span class="owner-label">STORE PARTNER PROGRAM</span>
+
+                <h1>Register Your Store</h1>
+
+                <p>
+                    Bring your cafe or shop online with ABES.BITE.
+                    Submit your application to get started.
+                </p>
+
+            </div>
+
+
+            <form id="store-registration-form">
+
+                <h3 class="form-section-title">
+                    Owner Information
+                </h3>
+
+                <label for="owner-name">Owner's Full Name</label>
+
+                <input
+                    type="text"
+                    id="owner-name"
+                    placeholder="Enter owner's name"
+                    required
+                >
+
+
+                <label for="owner-email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="owner-email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="owner-phone">Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="owner-phone"
+                    placeholder="Enter 10-digit mobile number"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    required
+                >
+
+
+                <label for="owner-password">Create Password</label>
+
+                <input
+                    type="password"
+                    id="owner-password"
+                    placeholder="Create a password"
+                    minlength="8"
+                    required
+                >
+
+
+                <label for="confirm-password">Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="Enter password again"
+                    minlength="8"
+                    required
+                >
+
+
+                <div class="form-divider"></div>
+
+
+                <h3 class="form-section-title">
+                    Store Information
+                </h3>
+
+
+                <label for="store-name">Store / Cafe Name</label>
+
+                <input
+                    type="text"
+                    id="store-name"
+                    placeholder="Enter your store name"
+                    required
+                >
+
+
+                <label for="store-category">Store Category</label>
+
+                <select id="store-category" required>
+
+                    <option value="">Select store category</option>
+
+                    <option value="Cafe">Cafe</option>
+
+                    <option value="Canteen">Canteen</option>
+
+                    <option value="Juice Corner">Juice Corner</option>
+
+                    <option value="Restaurant">Restaurant</option>
+
+                    <option value="Snacks Shop">Snacks Shop</option>
+
+                    <option value="Other">Other</option>
+
+                </select>
+
+
+                <label for="store-location">Store Location</label>
+
+                <input
+                    type="text"
+                    id="store-location"
+                    placeholder="Enter your campus location"
+                    required
+                >
+
+
+                <label for="store-description">About Your Store</label>
+
+                <textarea
+                    id="store-description"
+                    placeholder="Describe your cafe or shop..."
+                    rows="4"
+                    required
+                ></textarea>
+
+
+                <label for="store-logo">Upload Store Logo</label>
+
+                <input
+                    type="file"
+                    id="store-logo"
+                    accept="image/*"
+                >
+
+                <p class="upload-note">
+                    Upload a clear image of your store logo.
+                </p>
+
+
+                <div class="application-notice">
+
+                    <strong>Application Review</strong>
+
+                    <p>
+                        Your application will be reviewed by the
+                        ABES.BITE administrator. You can access
+                        your store dashboard only after approval.
+                    </p>
+
+                </div>
+
+
+                <button type="submit" class="auth-submit">
+                    Submit Store Application
+                </button>
+
+                <p id="store-message"></p>
+
+            </form>
+
+
+            <p class="auth-switch">
+
+                Already registered?
+
+                <a href="owner-login.html">
+                    Store Owner Login
+                </a>
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+   <script type="module" src="store-registration.js"></script>
+
+</body>
+</html>

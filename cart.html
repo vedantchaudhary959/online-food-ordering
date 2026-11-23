@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | ABES.BITE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            ABES<span>.BITE</span>
+        </a>
+
+        <a href="index.html" class="login-btn">Back to Home</a>
+    </header>
+
+    <main class="dashboard-content">
+
+        <h1>My Cart</h1>
+        <p>Review your selected food items before checkout.</p>
+
+        <div id="cart-store-name"></div>
+
+        <div id="cart-items">
+            Your cart is empty.
+        </div>
+
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+
+            <p>
+                Total:
+                <strong id="cart-total">₹0</strong>
+            </p>
+
+            <button id="checkout-btn" class="primary-btn" disabled>
+                Proceed to Checkout
+            </button>
+        </div>
+
+        <p id="cart-message"></p>
+
+    </main>
+
+    <script type="module" src="cart.js"></script>
+
+</body>
+</html>
